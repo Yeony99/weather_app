@@ -35,7 +35,7 @@ class Weather {
   Temperature temperature;
   WeatherDescription description;
   int cloudCoveragePercentage;
-  String weatherIcon;
+  String? weatherIcon;
 
   Weather(
       {required this.city,
@@ -43,7 +43,7 @@ class Weather {
         required this.temperature,
         required this.description,
         required this.cloudCoveragePercentage,
-        required this.weatherIcon});
+        this.weatherIcon});
 
   static Map<WeatherDescription, String> displayValues = {
     WeatherDescription.clear: "Clear",
