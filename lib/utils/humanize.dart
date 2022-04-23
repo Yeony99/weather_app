@@ -1,6 +1,6 @@
 import 'package:weather_app/models/src/weather.dart';
 
-import 'date_utils.dart';
+import 'date_util.dart';
 import 'forecast_animation_utils.dart';
 
 /// This class is used to turn enum values, date times, etc into human-readable Strings
@@ -22,7 +22,7 @@ class Humanize {
   }
 
   static String weatherDescription(Weather weather) {
-    var day = DateUtils.weekdays[weather.dateTime.weekday];
+    var day = DateUtil.weekdays[weather.dateTime.weekday];
     var description = Weather.displayValues[weather.description];
     return "$day. ${description?.replaceFirst(description[0], description[0].toUpperCase())}.";
   }
